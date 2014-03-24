@@ -1,0 +1,27 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "camelcase", 
+  "language": "Python", 
+  "trigger_enabled": false, 
+  "value": [
+    "import komodo as ko", 
+    "", 
+    "ke = komodo.editor", 
+    "if ke.selText:", 
+    "    try:", 
+    "        currentPos, selection = ke.currentPos, ke.selText", 
+    "        ke.beginUndoAction()", 
+    "        s = selection.title()", 
+    "        ke.replaceSel(s)", 
+    "    finally:", 
+    "        ke.endUndoAction()", 
+    "        ke.gotoPos(currentPos)", 
+    "    if ko.view:", 
+    "        ko.view.setFocus()"
+  ], 
+  "version": "1.0.12", 
+  "rank": 100, 
+  "async": false, 
+  "type": "macro", 
+  "trigger": "trigger_postopen"
+}
