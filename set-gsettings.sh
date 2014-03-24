@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install dconf-tools
+
 # Set cursor larger
 gsettings set org.cinnamon.desktop.interface cursor-size 400
 
