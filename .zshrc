@@ -29,7 +29,17 @@ ZSH_THEME="dallas"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gem git github gnu-utils history rbenv rsync urltools history-substring-string pip python ruby rvm vagrant zsh-syntax-highlighting tmuxinator tmux rake virtualenvwrapper git-extras gitflow github )
+plugins=(celery \
+    git github \
+    git-extras gitflow \
+    history history-substring-search \
+    ruby rbenv rvm rake gem \
+    rsync \
+    pip python virtualenv virtualenvwrapper \
+    vagrant \
+    zsh-syntax-highlighting \
+    tmuxinator tmux \
+    web-search)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -38,4 +48,3 @@ source <(cat ~/*.rc)
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export SHELL=/bin/zsh
-
