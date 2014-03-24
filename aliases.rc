@@ -1,0 +1,3 @@
+alias denver='TZ=MST date'
+alias est='TZ=EST date'
+

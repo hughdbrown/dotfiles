@@ -1,0 +1,4 @@
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export RVM_BIN="$HOME/.rvm/scripts/rvm"
+[[ -s ${RVM_BIN} ]] && . ${RVM_BIN}  # This loads RVM
+

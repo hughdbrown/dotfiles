@@ -1,0 +1,2 @@
+export PATH="/home/${USER}/Komodo-IDE-8/bin:$PATH"
+
