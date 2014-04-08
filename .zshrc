@@ -30,6 +30,7 @@ ZSH_THEME="dallas"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(celery \
+    docker \
     git github \
     git-extras gitflow \
     history history-substring-search \
@@ -40,11 +41,10 @@ plugins=(celery \
     zsh-syntax-highlighting \
     tmuxinator tmux \
     web-search)
+
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-
 source <(cat ~/*.rc)
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export SHELL=/bin/zsh
