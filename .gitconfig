@@ -1,25 +1,25 @@
 [user]
-	name = Hugh Brown
-	email = hbrown@amplify,com
+    name = Hugh Brown
+    email = hughdbrown@yahoo.com
 
 [color]
-	ui = auto
-	diff = auto
-	status = auto
-	branch = auto
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
 [color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+    current = yellow reverse
+    local = yellow
+    remote = green
 [color "diff"]
-	meta = blue bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+    meta = blue bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [color "status"]
-	added = blue
-	changed = green
-	untracked = cyan
+    added = blue
+    changed = green
+    untracked = cyan
 
 #[core]
 #	autocrlf = input
@@ -28,19 +28,24 @@
 #	pushNonFastForward = false
 #	statusHints = false
 [diff]
-	renames = copies
-	mnemonicprefix = true
-	tool = meld
+    renames = copies
+    mnemonicprefix = true
+    tool = meld
+
 [branch]
-	autosetupmerge = true
+    autosetupmerge = true
+
 [push]
-	default = tracking
+    default = tracking
+
 [rerere]
-	enabled = true
+    enabled = true
+
 [merge]
-	stat = true
-	tool = meld
-	conflictstyle = diff3
+    stat = true
+    tool = meld
+    conflictstyle = diff3
+
 [alias]
     visual = gitg &
     log1 = log --pretty=oneline --abbrev-commit
@@ -50,11 +55,26 @@
     standup = !git log --since yesterday --author `git config user.email` --pretty=short
     standup3 = !git log --since Friday --author `git config user.email` --pretty=short
     review = "!git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)"
-	up = pull --ff-only --all -p
-	up2 = "!git remote update -p; git merge --ff-only @{u}"
+    tito = "!( test -e rel-eng && tito tag || true ) && git push && git push --tags"
+    up = pull --ff-only --all -p
+    up2 = "!git remote update -p; git merge --ff-only @{u}"
+    appraise = !/Users/hughdbrown/go/bin/git-appraise
 
 [advice]
-	pushNonFastForward = false
-	statusHints = false
+    pushNonFastForward = false
+    statusHints = false
+
 [core]
-	whitespace = trailing-space,space-before-tab
+    whitespace = trailing-space,space-before-tab
+
+[help]
+    autocorrect = 1
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
+[rebase]
+    autosquash = true
+    autostash = true
