@@ -1,0 +1,4 @@
+export CUDA_ROOT=/Developer/NVIDIA/CUDA-8.0
+export LD_LIBRARY_PATH=${CUDA_ROOT}/lib
+export THEANO_FLAGS=device=gpu,init_gpu_device=gpu1
+

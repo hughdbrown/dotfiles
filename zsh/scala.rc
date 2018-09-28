@@ -1,0 +1,4 @@
+# export JAVA_HOME=$(/usr/libexec/java_home)
+export SCALA_VERSION=2.13.3
+export SCALA_HOME=/usr/local/Cellar/scala/$SCALA_VERSION
+export PATH=$PATH:$SCALA_HOME/bin
