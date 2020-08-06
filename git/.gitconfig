@@ -1,0 +1,75 @@
+[user]
+    name = Hugh Brown
+    email = hughdbrown@yahoo.com
+
+[advice]
+    pushNonFastForward = false
+    statusHints = false
+
+[alias]
+    visual = gitg &
+    log1 = log --pretty=oneline --abbrev-commit
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    standup = !git log --since yesterday --author `git config user.email` --pretty=short
+    standup3 = !git log --since Friday --author `git config user.email` --pretty=short
+    review = "!git push origin HEAD:refs/for/$(git rev-parse --abbrev-ref HEAD)"
+    tito = "!( test -e rel-eng && tito tag || true ) && git push && git push --tags"
+    up = pull --ff-only --all -p
+    up2 = "!git remote update -p; git merge --ff-only @{u}"
+    appraise = !/Users/hughdbrown/go/bin/git-appraise
+
+[branch]
+    autosetupmerge = true
+
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = blue bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = blue
+    changed = green
+    untracked = cyan
+
+[core]
+    whitespace = trailing-space,space-before-tab
+
+[diff]
+    renames = copies
+    mnemonicprefix = true
+    tool = meld
+    algorithm = patience
+
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+
+[help]
+    autocorrect = 1
+
+[merge]
+    stat = true
+    tool = meld
+    conflictstyle = diff3
+
+[push]
+    default = tracking
+
+[rebase]
+    autosquash = true
+    autostash = true
+
+[rerere]
+    enabled = true
