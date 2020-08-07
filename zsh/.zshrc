@@ -122,4 +122,4 @@ source <(cat ~/*.rc)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ssh-add -K ~/.ssh/id_rsa
-
+eval "$(direnv hook zsh)"
