@@ -82,7 +82,7 @@ plugins=(
     rsync
     rust
     supervisor
-    teraform
+    terraform
     tig
     tmux
     vagrant
